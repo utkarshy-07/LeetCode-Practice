@@ -14,10 +14,7 @@ public:
         return solve(x);
     }
     int addDigits(int num) {
-        return solve(num);
-
-
-
+        if(num >= 10) return solve(num);
+         return num;
     }
-         
 };
