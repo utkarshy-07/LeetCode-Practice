@@ -10,7 +10,7 @@ public:
             current += 2;
         }
         if(finalSum > 0){
-            ans.back() += finalSum;
+            ans.back()+= finalSum;
         }
         return ans;
     }
