@@ -1,13 +1,12 @@
 class Solution {
 public:
     int commonFactors(int a, int b) {
-         int gcf = gcd(a,b);
+        //  int gcf = gcd(a,b);
          int count = 0;
-         for(int i = 1 ; i * i <=gcf ; ++i){
-            if(gcf % i == 0){
+         int limit = min(a,b);
+        for(int i = 1 ; i <= limit ; i++){
+            if((a % i == 0) && (b % i == 0)){
                 count++;
-            if(i * i != gcf)
-             count++;
             }
         }
         return count;
