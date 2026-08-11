@@ -2,8 +2,7 @@ class Solution {
 public:
     int solve(int x) {
         int sum = 0;
-        x = abs(x);
-        while (x > 0) {
+        while (x != 0) {
             int last = x % 10;
             x /= 10;
             sum += last;
