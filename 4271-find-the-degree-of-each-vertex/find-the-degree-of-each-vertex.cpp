@@ -2,11 +2,13 @@ class Solution {
 public:
     vector<int> findDegrees(vector<vector<int>>& matrix) {
         int n = matrix.size();
-        vector<int>degree(n, 0);
+        vector<int>degree;
         for(int i = 0 ; i < n ; i++){
+            int sum = 0 ;
             for(int j = 0 ; j < n ; j++){
-                degree[i] += matrix[i][j];
+                sum += matrix[i][j];
             }
+            degree.push_back(sum);
         }
         return degree;
     }
